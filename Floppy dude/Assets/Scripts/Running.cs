@@ -22,11 +22,21 @@ public class Running : MonoBehaviour
         {
             player.velocity = Vector2.up * 25;
         }
+    }
 
-
-        void Lose()
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag != "Safe")
         {
-            Destroy(player);
+            Lose();
         }
     }
+    public void Lose()
+    {
+        Destroy(gameObject);
+    }
+
+
+
+
 }
