@@ -34,6 +34,7 @@ public class Running : MonoBehaviour
     public void Lose()
     {
         Destroy(gameObject);
+        Scene_Management.Load_Scene(2);
     }
 
 

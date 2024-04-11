@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManagement : MonoBehaviour
+public class Scene_Management : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,7 +16,12 @@ public class SceneManagement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") == true)  // Goes from Start Screen to Running game if the player pressed SPACE (Jump).
         {
-            SceneManager.LoadScene(1);
+            Load_Scene(1);
         }
+    }
+
+    static public void Load_Scene(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
