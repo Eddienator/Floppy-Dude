@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Running : MonoBehaviour
 {
+    public int playervel;
     public Rigidbody2D player;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Running : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") == true)
         {
-            player.velocity = Vector2.up * 25;
+            player.velocity = Vector2.up * playervel;
         }
     }
 
