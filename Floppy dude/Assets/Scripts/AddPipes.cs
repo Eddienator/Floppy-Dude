@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AddPipes : MonoBehaviour
 {
-    public int time;
     public GameObject pipe;
     void Start()
     {
@@ -14,7 +13,7 @@ public class AddPipes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator timer()
@@ -27,5 +26,6 @@ public class AddPipes : MonoBehaviour
     {
         Vector2 pos = new Vector2(transform.position.x, transform.position.y + Random.Range(-5, 3));
         Instantiate(pipe,pos,Quaternion.identity);
+
     }
 }

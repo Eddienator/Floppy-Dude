@@ -8,12 +8,14 @@ using UnityEngine.UI;
 public class Running : MonoBehaviour
 {
     public int playervel;
-    public Rigidbody2D player;
+    public Rigidbody2D Torso;
     // Start is called before the first frame update
     void Start()
     {
 
-        player = GetComponent<Rigidbody2D>();
+        Torso = this.GetComponent<Rigidbody2D>();
+
+
     }
 
     // Update is called once per frame
@@ -21,17 +23,19 @@ public class Running : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") == true)
         {
-            player.velocity = Vector2.up * playervel;
+            Torso.velocity = Vector2.up * playervel;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+
+    private void OnTriggerEnter2D(Collider2D trigger)  // Checks collision with both the ground and the pipes.
     {
-        if (col.gameObject.tag != "Safe")
+        if (trigger.gameObject.tag != "Safe")
         {
             Lose();
         }
     }
+
     public void Lose()
     {
         Destroy(gameObject);

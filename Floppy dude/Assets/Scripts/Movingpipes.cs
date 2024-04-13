@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Movingpipes : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    public Rigidbody2D rbpipe;
     public float vel;
     void Start()
     {
-        rb.velocity = transform.right * -vel;
+        rbpipe.velocity = transform.right * -vel;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (rbpipe.transform.position.x < -50)
+        {
+            Destroy(gameObject);
+        }
     }
 }
