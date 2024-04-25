@@ -133,12 +133,13 @@ GameObject:
   m_Component:
   - component: {fileID: 133312681}
   - component: {fileID: 133312685}
+  - component: {fileID: 133312686}
   - component: {fileID: 133312684}
   - component: {fileID: 133312683}
   - component: {fileID: 133312682}
   m_Layer: 0
   m_Name: FloppyDude_RArm
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,6 +308,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &133312686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133312680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dude: {fileID: 855486741}
 --- !u!1 &348730157
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,12 +810,12 @@ GameObject:
   m_Component:
   - component: {fileID: 627742347}
   - component: {fileID: 627742346}
+  - component: {fileID: 627742348}
   - component: {fileID: 627742345}
   - component: {fileID: 627742344}
-  - component: {fileID: 627742348}
   m_Layer: 0
   m_Name: FloppyDude_Torso
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,16 +968,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 627742343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43821b1745953714dbdc208fb09c0fa0, type: 3}
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playervel: 18
-  Torso: {fileID: 627742344}
-  LArm: {fileID: 1233243202}
-  RArm: {fileID: 133312683}
-  LLeg: {fileID: 2033401258}
-  RLeg: {fileID: 1857290539}
-  Head: {fileID: 950969641}
+  dude: {fileID: 855486741}
 --- !u!1 &799923737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 855486742}
+  - component: {fileID: 855486743}
   m_Layer: 0
   m_Name: Floppy
   m_TagString: Untagged
@@ -1046,6 +1055,26 @@ Transform:
   - {fileID: 2033401255}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855486743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855486741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43821b1745953714dbdc208fb09c0fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playervel: 18
+  player:
+  - {fileID: 627742344}
+  - {fileID: 950969641}
+  - {fileID: 1233243202}
+  - {fileID: 133312683}
+  - {fileID: 1857290539}
+  - {fileID: 2033401258}
 --- !u!1 &950969638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,12 +1085,13 @@ GameObject:
   m_Component:
   - component: {fileID: 950969639}
   - component: {fileID: 950969643}
+  - component: {fileID: 950969644}
   - component: {fileID: 950969642}
   - component: {fileID: 950969641}
   - component: {fileID: 950969640}
   m_Layer: 0
   m_Name: FloppyDude_Head
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,6 +1250,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &950969644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950969638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dude: {fileID: 855486741}
 --- !u!1 &1233243199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,12 +1273,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1233243200}
   - component: {fileID: 1233243204}
+  - component: {fileID: 1233243205}
   - component: {fileID: 1233243203}
   - component: {fileID: 1233243202}
   - component: {fileID: 1233243201}
   m_Layer: 0
   m_Name: FloppyDude_LArm
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1404,6 +1448,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1233243205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233243199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dude: {fileID: 855486741}
 --- !u!1 &1857290536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,12 +1471,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1857290537}
   - component: {fileID: 1857290541}
+  - component: {fileID: 1857290542}
   - component: {fileID: 1857290540}
   - component: {fileID: 1857290539}
   - component: {fileID: 1857290538}
   m_Layer: 0
   m_Name: FloppyDude_RLeg
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1588,6 +1646,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1857290542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857290536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dude: {fileID: 855486741}
 --- !u!1 &2033401254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,12 +1669,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2033401255}
   - component: {fileID: 2033401259}
+  - component: {fileID: 2033401260}
   - component: {fileID: 2033401258}
   - component: {fileID: 2033401257}
   - component: {fileID: 2033401256}
   m_Layer: 0
   m_Name: FloppyDude_LLeg
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,6 +1844,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2033401260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033401254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad100660649fa247bf66823e87b3813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dude: {fileID: 855486741}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
