@@ -1,22 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Movingpipes : MonoBehaviour
 {
-    public Rigidbody2D rbpipe;
-    public float vel;
+    public Rigidbody2D rigidBodyPipe;
+    public float velocity;
     void Start()
     {
-        rbpipe.velocity = transform.right * -vel;
+        rigidBodyPipe.velocity = transform.right * -velocity;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (rbpipe.transform.position.x < -50)
+        if (rigidBodyPipe.transform.position.x < -50)
         {
             Destroy(gameObject);
         }
+        
+        
     }
+
+
 }

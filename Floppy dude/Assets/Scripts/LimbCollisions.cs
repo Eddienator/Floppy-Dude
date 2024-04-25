@@ -10,7 +10,11 @@ public class LimbCollisions : MonoBehaviour
     {
         if (trigger.gameObject.tag != "Safe")
         {
-            Lose();
+            if (trigger.gameObject.tag != "HighScore")
+            {
+                Lose();
+            }
+            
         }
     }
     public void Lose()
