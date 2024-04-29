@@ -6,14 +6,23 @@ using UnityEngine;
 public class SeeHighScore : MonoBehaviour
 {
     public TMP_Text highScoreDisplay;
-    public int highScore;
+    public int score;
+    public int highscore = 0;
     void Start()
     {
-        highScore = 0;
+        score = 0;
+        highscore = PlayerPrefs.GetInt("highscore", highscore);
     }
     void Update()
     {
-        highScoreDisplay.SetText("Highscore:" + highScore.ToString());
+        highScoreDisplay.SetText("Score:" + score.ToString());
+
+        if (score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("highscore", highscore);
+            PlayerPrefs.Save();
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,7 +34,7 @@ public class SeeHighScore : MonoBehaviour
     }
     string AddToHighScore()
     {
-        highScore++;
-        return highScore.ToString();
+        score++;
+        return score.ToString();
     }
 }
